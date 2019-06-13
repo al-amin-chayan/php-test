@@ -5,7 +5,7 @@ namespace Test;
 use PHPUnit\Framework\TestCase;
 
 class Test extends TestCase {
-    public function test_odd_or_even_to_true() {
+    public function test_printDepth_to_true() {
         $a = array (
             "key1" => 1,
             "key2" => array (
@@ -16,6 +16,8 @@ class Test extends TestCase {
             ),
         );
 
-        $this->assertTrue( printDepth( $a ) == '' );
+        $expected = "key1 1\nKey2 1\nkey3 2\nkey4 2\nkey5 3";
+        $this->expectOutputString($expected);
+        printDepth( $a );
     }
 }
