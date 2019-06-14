@@ -8,12 +8,15 @@
     }
   ],
   "require": {
-    "php": ">=7.0.0"
+    "php": ">=7.1.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^8.2"
   },
   "autoload": {
+    "psr-4": {
+      "Src\\": "src/"
+    },
     "files": [
       "src/functions.php"
     ]
